@@ -1,5 +1,7 @@
 # misc
 *.pem
+aws_access
+aws_secret
 
 # Local .terraform directories
 **/.terraform/*
