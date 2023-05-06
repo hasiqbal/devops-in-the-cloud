@@ -4,14 +4,35 @@ variable "vpc_cidr" {
   description = "aws vpc"
 }
 
-variable "public_cidrs" {
-  type        = list(string)
-  default     = ["10.124.1.0/24","10.124.2.0/24","10.124.3.0/24"]
-  description = "public cidrs"
+variable "access_ip" {
+  type    = string
+  default = "90.210.102.109/32"
 }
 
-variable "private_cidrs" {
-  type        = list(string)
-  default     = ["10.124.4.0/24","10.124.5.0/24","10.124.6.0/24"]
-  description = "private cidrs"
+variable "local_ip" {
+  type    = string
+  default = "13.42.195.183/32"
+}
+
+variable "main_instance_type" {
+  type    = string
+  default = "t2.micro"
+}
+
+variable "main_vol_size" {
+  type    = number
+  default = 8
+}
+
+variable "main_instance_count" {
+  type    = number
+  default = 1
+}
+
+variable "key_name" {
+  type = string
+}
+
+variable "public_key_path" {
+  type = string
 }
